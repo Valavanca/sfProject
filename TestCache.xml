@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestClassesCache>
+    <TestClasses>
+        <TestClass>
+            <Id>01p580000081Cv0AAE</Id>
+            <Name>EventTriggerTest</Name>
+            <TestMethods>
+                <TestMethod>
+                    <Name>testInsertEvent</Name>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+    </TestClasses>
+    <CacheDate>2016-08-16T20:33:58.5400897Z</CacheDate>
+    <IsLocal>false</IsLocal>
+</TestClassesCache>

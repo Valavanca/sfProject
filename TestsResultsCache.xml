@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestsResultsCache
+    LastClearTime="0001-01-01T00:00:00">
+    <TestClasses>
+        <TestClass>
+            <TestClassId>01p580000081Cv0AAE</TestClassId>
+            <TestQueueId>70958000000DWNTAA4</TestQueueId>
+            <TestMethods>
+                <TestMethod>
+                    <ApexLogId>07L58000003To2rEAC</ApexLogId>
+                    <Name>testInsertEvent</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+    </TestClasses>
+</TestsResultsCache>

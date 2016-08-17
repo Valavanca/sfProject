@@ -1,0 +1,24 @@
+<apex:page controller="ScheduleController">
+    <apex:form >
+            <apex:pageBlock >
+                <apex:pageblocksection columns="2">
+                    <apex:pageblocktable value="{!eventOfDayList}" var="currentEvent">
+                        <apex:column value="{!currentEvent.Name}" />
+                        <apex:column value="{!currentEvent.Start_datetime__c}" />
+                        <apex:column value="{!currentEvent.Finish_datetime__c}" />
+                        <apex:column value="{!currentEvent.Teacher__c}" />
+                        <apex:column value="{!currentEvent.Topic__c}" />
+                    </apex:pageblocktable>
+                  <!--  <apex:dynamiccomponent componentvalue="{!dynamicDataTable}" />
+                    <apex:pageblocktable value="{!tableRows}" var="record">
+                        <apex:repeat value="{!record.fields}" var="item">
+                            <apex:column value="{!item.value}" />
+                        </apex:repeat>
+                        <apex:repeat value="{!sObjectFieldNames}" var="header">
+                            <apex:column headervalue="{!header}" styleclass="empty-column-content" />
+                        </apex:repeat>
+                    </apex:pageblocktable>-->
+                </apex:pageblocksection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>
