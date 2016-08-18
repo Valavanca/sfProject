@@ -1,0 +1,17 @@
+<apex:page controller="KnowledgeCheckResultsController">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblocksection >
+              <apex:inputText label="Enter Name Test" value="{!testName}"/>
+                <apex:commandbutton value="Enter" action="{!showTestResult}"/>
+            </apex:pageblocksection>
+            <apex:pageBlockSection >
+                <apex:pageblocktable value="{!resultThisDayList}" var="currentResult">
+                    <apex:column value="{!currentResult.FirstName}" />
+                    <apex:column value="{!currentResult.LastName}" />
+                    <apex:column value="{!currentResult.Percentage}" />
+                </apex:pageblocktable>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -26,8 +26,4 @@ trigger EventTrigger on Event__c (before insert, before update, before delete, a
 		if (Trigger.isUpdate){}
 		 
 	}
-
-
-	
-	
 }
