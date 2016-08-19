@@ -3,12 +3,73 @@
     LastClearTime="0001-01-01T00:00:00">
     <TestClasses>
         <TestClass>
-            <TestClassId>01p580000081Cv0AAE</TestClassId>
-            <TestQueueId>70958000000DWNTAA4</TestQueueId>
+            <TestClassId>01p580000081YUSAA2</TestClassId>
+            <TestQueueId>70958000000DXZjAAO</TestQueueId>
             <TestMethods>
                 <TestMethod>
-                    <ApexLogId>07L58000003To2rEAC</ApexLogId>
+                    <Name>testNullResult</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+        <TestClass>
+            <TestClassId>01p580000081Cv0AAE</TestClassId>
+            <TestQueueId>70958000000DXYCAA4</TestQueueId>
+            <TestMethods>
+                <TestMethod>
                     <Name>testInsertEvent</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventDifferentPriorityBulk</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventHightPriorityBulk</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventLowPriority</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testUpdateEventBulk</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+        <TestClass>
+            <TestClassId>01p580000081Cv0AAE</TestClassId>
+            <TestQueueId>70958000000DXY7AAO</TestQueueId>
+            <TestMethods>
+                <TestMethod>
+                    <Name>testInsertEvent</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+        <TestClass>
+            <TestClassId>01p580000081Cv0AAE</TestClassId>
+            <TestQueueId>70958000000DXVmAAO</TestQueueId>
+            <TestMethods>
+                <TestMethod>
+                    <Name>testInsertEventHightPriorityBulk</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEvent</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventDifferentPriorityBulk</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventLowPriority</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testUpdateEventBulk</Name>
                     <TestResultStatus>Pass</TestResultStatus>
                 </TestMethod>
             </TestMethods>

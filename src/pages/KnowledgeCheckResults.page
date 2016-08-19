@@ -1,17 +1,29 @@
 <apex:page controller="KnowledgeCheckResultsController">
-    <apex:form >
+    <apex:form id="result">
         <apex:pageblock >
             <apex:pageblocksection >
-              <apex:inputText label="Enter Name Test" value="{!testName}"/>
-                <apex:commandbutton value="Enter" action="{!showTestResult}"/>
+                <apex:inputtext label="Enter Test Name" value="{!testName}" />
+                <apex:commandbutton value="Enter" action="{!showTestResult}" rerender="result" />
             </apex:pageblocksection>
-            <apex:pageBlockSection >
-                <apex:pageblocktable value="{!resultThisDayList}" var="currentResult">
-                    <apex:column value="{!currentResult.FirstName}" />
-                    <apex:column value="{!currentResult.LastName}" />
-                    <apex:column value="{!currentResult.Percentage}" />
+        </apex:pageblock>
+        <apex:pageblock rendered="{!showResultBlock}">
+            <apex:pageblocksection >
+                <apex:pageblocktable value="{!testScoreList}" var="currentResult" align="right">
+                    <apex:column headervalue="Test Name" value="{!currentResult.testScoreName}" />
+                    <apex:column headervalue="Average result" value="{!currentResult.averageResult} %" />
+                    <apex:column headervalue="Best result" value="{!currentResult.bestResult} %" />
+                    <apex:column headervalue="Worst result" value="{!currentResult.worstResult} %" />
+                    <apex:column headervalue="Quantity member" value="{!currentResult.quantityMember}" />
                 </apex:pageblocktable>
-            </apex:pageBlockSection>
+            </apex:pageblocksection>
+                <apex:pageblocksection rendered="{!showResultTable}">
+                        <apex:pageblocktable value="{!resultThisDayList}" var="currentResult">
+                            <apex:column headervalue="First name" value="{!currentResult.FirstName}" />
+                            <apex:column headervalue="Last Name" value="{!currentResult.LastName}" />
+                            <apex:column headervalue="Result" value="{!currentResult.Percentage} %" />
+                        </apex:pageblocktable>
+                </apex:pageblocksection>
+            <apex:commandbutton value="{!buttonName}" action="{!changeSort}" rerender="result" rendered="{!showResultTable}" />
         </apex:pageblock>
     </apex:form>
 </apex:page>

@@ -5,7 +5,7 @@ public class EventTriggerTest {
 		Integer quantity = 1;
 		DateTime startTimeForEvent = DateTime.newInstanceGMT(2016, 08, 16, 10, 0, 0);
 		TestDataGenerator dateGenerator = new TestDataGenerator();
-		List<Event__c> eventList = dateGenerator.createEventList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventList = (List<Event__c>)dateGenerator.createSObjectList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
 
 		Test.startTest();
 		insert eventList;
@@ -19,8 +19,8 @@ public class EventTriggerTest {
 		Integer quantityBulk = 200;
 		DateTime startTimeForEvent = DateTime.newInstanceGMT(2016, 08, 16, 10, 0, 0);
 		TestDataGenerator dateGenerator = new TestDataGenerator();
-		List<Event__c> eventListFirst = dateGenerator.createEventList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
-		List<Event__c> eventListSecond = dateGenerator.createEventList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent), dateGenerator.generateEventRecreation(startTimeForEvent));
+		List<Event__c> eventListFirst = (List<Event__c>)dateGenerator.createSObjectList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventListSecond = (List<Event__c>)dateGenerator.createSObjectList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent), dateGenerator.generateEventRecreation(startTimeForEvent));
 		insert eventListFirst;
 
 		Test.startTest();
@@ -38,8 +38,8 @@ public class EventTriggerTest {
 		Integer quantityBulk = 200;
 		DateTime startTimeForEvent = DateTime.newInstanceGMT(2016, 08, 16, 10, 0, 0);
 		TestDataGenerator dateGenerator = new TestDataGenerator();
-		List<Event__c> eventListFirst = dateGenerator.createEventList(quantityBulk, dateGenerator.generateEventRecreation(startTimeForEvent));
-		List<Event__c> eventListSecond = dateGenerator.createEventList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventListFirst = (List<Event__c>)dateGenerator.createSObjectList(quantityBulk, dateGenerator.generateEventRecreation(startTimeForEvent));
+		List<Event__c> eventListSecond = (List<Event__c>)dateGenerator.createSObjectList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent));
 		dateGenerator.insertSpacesTime(2,eventListFirst);
 		dateGenerator.insertSpacesTime(2,eventListSecond);
 		insert eventListFirst;
@@ -61,9 +61,9 @@ public class EventTriggerTest {
 		Integer quantityBulk = 200;
 		DateTime startTimeForEvent = DateTime.newInstanceGMT(2016, 08, 16, 10, 0, 0);
 		TestDataGenerator dateGenerator = new TestDataGenerator();
-		List<Event__c> eventListFirst = dateGenerator.createEventList(quantityBulk, dateGenerator.generateEventRecreation(startTimeForEvent),dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventListFirst = (List<Event__c>)dateGenerator.createSObjectList(quantityBulk, dateGenerator.generateEventRecreation(startTimeForEvent),dateGenerator.generateEventLesson(startTimeForEvent));
 		startTimeForEvent = startTimeForEvent.addHours(1);
-		List<Event__c> eventListSecond = dateGenerator.createEventList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventListSecond = (List<Event__c>)dateGenerator.createSObjectList(quantityBulk, dateGenerator.generateEventLesson(startTimeForEvent));
 		dateGenerator.insertSpacesTime(2,eventListFirst);
 		dateGenerator.insertSpacesTime(2,eventListSecond);
 		insert eventListFirst;
@@ -86,7 +86,7 @@ public class EventTriggerTest {
 		Integer quantity = 200;
 		DateTime startTimeForEvent = DateTime.newInstanceGMT(2016, 08, 16, 10, 0, 0);
 		TestDataGenerator dateGenerator = new TestDataGenerator();
-		List<Event__c> eventList = dateGenerator.createEventList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
+		List<Event__c> eventList = (List<Event__c>)dateGenerator.createSObjectList(quantity, dateGenerator.generateEventLesson(startTimeForEvent));
 		dateGenerator.insertSpacesTime(2,eventList);
 		insert eventList;
 		for(Event__c currentEvent: eventList){
@@ -98,27 +98,7 @@ public class EventTriggerTest {
 		System.assertEquals(quantity,[SELECT COUNT() FROM Event__c WHERE Name = 'test']);
 	}
 
-	private class TestDataGenerator{
-		
-		private List<Event__c> createEventList (Integer quantity, Event__c exemplarEvent){
-			List<Event__c> eventList = new List<Event__c>();
-			for (Integer i = 0; i < quantity; i++){
-				eventList.add(exemplarEvent.clone(false,true,true,true)); 
-			}
-			return eventList;
-		}
-
-		private List<Event__c> createEventList (Integer quantity, Event__c exemplarEventFirst, Event__c exemplarEventSecond){
-			List<Event__c> eventList = new List<Event__c>();
-			for (Integer i = 0; i < quantity; i++){
-				if(Math.mod(i,2) == 0){
-				eventList.add(exemplarEventFirst.clone(false,true,true,true)); 
-				} else{
-				eventList.add(exemplarEventSecond.clone(false,true,true,true)); 
-				}
-			}
-			return eventList;
-		}
+	private class TestDataGenerator extends CloneMaker{
 
 		private Event__c generateEventLesson(Datetime startTime){
 			Event__c exemplarEvent =  EventBuilder.getEvent()

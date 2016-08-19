@@ -1,26 +1,28 @@
-<apex:page controller="ScheduleController">
+<apex:page controller="ScheduleController" doctype="html-5.0">
     <apex:form >
-            <apex:pageBlock >
-                <apex:pageblocksection columns="2">
-                        <apex:outputpanel >
-                            <apex:outputlabel value="Event" />
-                            <apex:pageblocktable value="{!eventOfDayList}" var="currentEvent">
-                                <apex:column value="{!currentEvent.Name}" />
-                                <apex:column value="{!currentEvent.Start_datetime__c}" />
-                                <apex:column value="{!currentEvent.Finish_datetime__c}" />
-                                <apex:column value="{!currentEvent.Teacher__c}" />
-                                <apex:column value="{!currentEvent.Topic__c}" />
-                            </apex:pageblocktable>
-                        </apex:outputpanel>
-                    <apex:outputpanel >
-                        <apex:outputlabel value="---------" />
-                        <apex:pageblocktable value="{!wAttendanceList}" var="currentAttendance">
-                            <apex:column headervalue="Name student" value="{!currentAttendance.nameStudent}" />
-                            <apex:column headervalue="Number of visits" value="{!currentAttendance.numberOfVisit}" />
-                        </apex:pageblocktable>
-
-                        </apex:outputpanel>
-</apex:pageblocksection>
-            </apex:pageBlock>
+        <apex:pageblock id="schedule">
+            <apex:pagemessage title="There are no events . Date: {!dateForSchedule} You can select another date" severity="Warning" rendered="{!showError}" />
+            <apex:pageblocksection columns="2" rendered="{!eventToday}">
+                <apex:outputpanel >
+                    <apex:outputlabel value="Events date: {!dateForSchedule}" />
+                    <apex:pageblocktable value="{!eventOfDayList}" var="currentEvent">
+                        <apex:column value="{!currentEvent.Name}" />
+                        <apex:column value="{!currentEvent.Start_datetime__c}" />
+                        <apex:column value="{!currentEvent.Finish_datetime__c}" />
+                        <apex:column value="{!currentEvent.Teacher__c}" />
+                        <apex:column value="{!currentEvent.Topic__c}" />
+                    </apex:pageblocktable>
+                </apex:outputpanel>
+                <apex:outputpanel >
+                    <apex:outputlabel value="Visitors to the event" />
+                    <apex:pageblocktable value="{!wAttendanceList}" var="currentAttendance">
+                        <apex:column headervalue="Name student" value="{!currentAttendance.nameStudent}" />
+                        <apex:column headervalue="Number of visits" value="{!currentAttendance.numberOfVisit}" />
+                    </apex:pageblocktable>
+                </apex:outputpanel>
+            </apex:pageblocksection>
+            <apex:input type="date" label="Event Date" value="{!dateForSchedule}" />
+            <apex:commandbutton value="Show" action="{!showSchedule}" rerender="schedule" />
+        </apex:pageblock>
     </apex:form>
 </apex:page>

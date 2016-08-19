@@ -2,15 +2,36 @@
 <TestClassesCache>
     <TestClasses>
         <TestClass>
+            <Id>01p580000081YUSAA2</Id>
+            <Name>KnowledgeCheckResultsControllerTest</Name>
+            <TestMethods>
+                <TestMethod>
+                    <Name>testNullResult</Name>
+                </TestMethod>
+            </TestMethods>
+        </TestClass>
+        <TestClass>
             <Id>01p580000081Cv0AAE</Id>
             <Name>EventTriggerTest</Name>
             <TestMethods>
                 <TestMethod>
                     <Name>testInsertEvent</Name>
                 </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventLowPriority</Name>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventHightPriorityBulk</Name>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testInsertEventDifferentPriorityBulk</Name>
+                </TestMethod>
+                <TestMethod>
+                    <Name>testUpdateEventBulk</Name>
+                </TestMethod>
             </TestMethods>
         </TestClass>
     </TestClasses>
-    <CacheDate>2016-08-16T20:33:58.5400897Z</CacheDate>
+    <CacheDate>2016-08-19T03:41:20.4294564Z</CacheDate>
     <IsLocal>false</IsLocal>
 </TestClassesCache>

@@ -30,12 +30,19 @@
     <Folder Include="triggers\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\CloneMaker.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\CloneMaker.cls</PhysicalRelativePath>
+      <Id>01p580000081YUDAA2</Id>
+      <LastModifiedDateUtcTicks>131160476910000000</LastModifiedDateUtcTicks>
+      <Hash>NBD9F/oTNRgBm6fPHlMFjg==</Hash>
+    </Compile>
     <Compile Include="classes\Constants.cls">
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\Constants.cls</PhysicalRelativePath>
       <Id>01p580000081MqPAAU</Id>
-      <Hash>dsz5ofE1c7gaJCDZcuoj2g==</Hash>
-      <LastModifiedDateUtcTicks>131158945030000000</LastModifiedDateUtcTicks>
+      <Hash>Y8OPc4OVemn2tBvGi3H7/g==</Hash>
+      <LastModifiedDateUtcTicks>131160472240000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="classes\EmeilSendTeachers.cls">
       <SubType>Class</SubType>
@@ -69,8 +76,8 @@
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\EventTriggerTest.cls</PhysicalRelativePath>
       <Id>01p580000081Cv0AAE</Id>
-      <LastModifiedDateUtcTicks>131158935690000000</LastModifiedDateUtcTicks>
-      <Hash>6IQrMLOzyVfTf9uQIOd2Aw==</Hash>
+      <LastModifiedDateUtcTicks>131160484030000000</LastModifiedDateUtcTicks>
+      <Hash>yM7RWZAeWjRKE5WjwTxlEg==</Hash>
     </Compile>
     <Compile Include="classes\ITrigger.cls">
       <PhysicalRelativePath>src\classes\ITrigger.cls</PhysicalRelativePath>
@@ -83,22 +90,43 @@
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\KnowledgeCheckResultsController.cls</PhysicalRelativePath>
       <Id>01p580000081TOEAA2</Id>
-      <Hash>k1ZVXfli/IIEYiKIkoYW9A==</Hash>
-      <LastModifiedDateUtcTicks>131160035770000000</LastModifiedDateUtcTicks>
+      <Hash>WAmgG31vMXcir6swIASqjg==</Hash>
+      <LastModifiedDateUtcTicks>131160424890000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\KnowledgeCheckResultsControllerTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\KnowledgeCheckResultsControllerTest.cls</PhysicalRelativePath>
+      <Id>01p580000081YUSAA2</Id>
+      <LastModifiedDateUtcTicks>131160521050000000</LastModifiedDateUtcTicks>
+      <Hash>0jqjNMZHx29r0nPgo4PGog==</Hash>
     </Compile>
     <Compile Include="classes\ScheduleController.cls">
       <PhysicalRelativePath>src\classes\ScheduleController.cls</PhysicalRelativePath>
       <SubType>Class</SubType>
       <Id>01p5800000811vMAAQ</Id>
-      <LastModifiedDateUtcTicks>131159941790000000</LastModifiedDateUtcTicks>
-      <Hash>S0pwTVjnOdGfI9pNzn4oNA==</Hash>
+      <LastModifiedDateUtcTicks>131160334130000000</LastModifiedDateUtcTicks>
+      <Hash>L5RiZM5woXFxXSR0qismOQ==</Hash>
+    </Compile>
+    <Compile Include="classes\TestResultBuilder.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\TestResultBuilder.cls</PhysicalRelativePath>
+      <Id>01p580000081YUIAA2</Id>
+      <LastModifiedDateUtcTicks>131160484030000000</LastModifiedDateUtcTicks>
+      <Hash>KdFqNa++emw6xb3anxzchA==</Hash>
     </Compile>
     <Compile Include="classes\TestResultTriggerHandler.cls">
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\TestResultTriggerHandler.cls</PhysicalRelativePath>
       <Id>01p580000081TIaAAM</Id>
-      <Hash>wQy7Z5vpxjc70qQxEEzrdg==</Hash>
-      <LastModifiedDateUtcTicks>131159876740000000</LastModifiedDateUtcTicks>
+      <Hash>Og0gI5x52PT2HhLr+MIonw==</Hash>
+      <LastModifiedDateUtcTicks>131160472430000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\TestResultTriggerTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\TestResultTriggerTest.cls</PhysicalRelativePath>
+      <Id>01p580000081YArAAM</Id>
+      <LastModifiedDateUtcTicks>131160427590000000</LastModifiedDateUtcTicks>
+      <Hash>lWw5eVKXEI0nsXwNdbxkIA==</Hash>
     </Compile>
     <Compile Include="classes\TriggerHandler.cls">
       <PhysicalRelativePath>src\classes\TriggerHandler.cls</PhysicalRelativePath>
@@ -111,22 +139,15 @@
       <SubType>Page</SubType>
       <PhysicalRelativePath>src\pages\KnowledgeCheckResults.page</PhysicalRelativePath>
       <Id>06658000002YxUNAA0</Id>
-      <Hash>t/pEMRzzcBm2GU4NZgR2UA==</Hash>
-      <LastModifiedDateUtcTicks>131160030420000000</LastModifiedDateUtcTicks>
-    </Compile>
-    <Compile Include="pages\lessonLibrary.page">
-      <SubType>Page</SubType>
-      <PhysicalRelativePath>src\pages\lessonLibrary.page</PhysicalRelativePath>
-      <Id>06658000002Yxg0AAC</Id>
-      <Hash>32rfQkVlzadTJBYG5BmF2A==</Hash>
-      <LastModifiedDateUtcTicks>131160006820000000</LastModifiedDateUtcTicks>
+      <Hash>GL//aMhO7zd+uVZhaSJ13A==</Hash>
+      <LastModifiedDateUtcTicks>131160424890000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="pages\Schedule.page">
       <PhysicalRelativePath>src\pages\Schedule.page</PhysicalRelativePath>
       <SubType>Page</SubType>
       <Id>06658000002YnTMAA0</Id>
-      <LastModifiedDateUtcTicks>131159818930000000</LastModifiedDateUtcTicks>
-      <Hash>fzQjEBranCBYNzY2Mg1XiQ==</Hash>
+      <LastModifiedDateUtcTicks>131160325520000000</LastModifiedDateUtcTicks>
+      <Hash>5x5G4NyjJZiKYd3+4mzWFg==</Hash>
     </Compile>
     <Compile Include="triggers\TestResultTrigger.trigger">
       <SubType>Trigger</SubType>
@@ -503,11 +524,18 @@
     </Object>
   </ItemGroup>
   <ItemGroup>
+    <None Include="classes\CloneMaker.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\CloneMaker.cls-meta.xml</PhysicalRelativePath>
+      <LastModifiedDateUtcTicks>131160476910000000</LastModifiedDateUtcTicks>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <DependentUpon>classes\CloneMaker.cls</DependentUpon>
+    </None>
     <None Include="classes\Constants.cls-meta.xml">
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\Constants.cls-meta.xml</PhysicalRelativePath>
       <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
-      <LastModifiedDateUtcTicks>131158945030000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160472240000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\Constants.cls</DependentUpon>
     </None>
     <None Include="classes\EmeilSendTeachers.cls-meta.xml">
@@ -541,7 +569,7 @@
     <None Include="classes\EventTriggerTest.cls-meta.xml">
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\EventTriggerTest.cls-meta.xml</PhysicalRelativePath>
-      <LastModifiedDateUtcTicks>131158935690000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160484030000000</LastModifiedDateUtcTicks>
       <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
       <DependentUpon>classes\EventTriggerTest.cls</DependentUpon>
     </None>
@@ -556,22 +584,43 @@
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\KnowledgeCheckResultsController.cls-meta.xml</PhysicalRelativePath>
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
-      <LastModifiedDateUtcTicks>131160035770000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160424890000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\KnowledgeCheckResultsController.cls</DependentUpon>
+    </None>
+    <None Include="classes\KnowledgeCheckResultsControllerTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\KnowledgeCheckResultsControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <LastModifiedDateUtcTicks>131160521050000000</LastModifiedDateUtcTicks>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <DependentUpon>classes\KnowledgeCheckResultsControllerTest.cls</DependentUpon>
     </None>
     <None Include="classes\ScheduleController.cls-meta.xml">
       <PhysicalRelativePath>src\classes\ScheduleController.cls-meta.xml</PhysicalRelativePath>
       <SubType>Metadata</SubType>
       <DependentUpon>classes\ScheduleController.cls</DependentUpon>
-      <LastModifiedDateUtcTicks>131159941790000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160334130000000</LastModifiedDateUtcTicks>
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+    </None>
+    <None Include="classes\TestResultBuilder.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\TestResultBuilder.cls-meta.xml</PhysicalRelativePath>
+      <LastModifiedDateUtcTicks>131160484030000000</LastModifiedDateUtcTicks>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <DependentUpon>classes\TestResultBuilder.cls</DependentUpon>
     </None>
     <None Include="classes\TestResultTriggerHandler.cls-meta.xml">
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\TestResultTriggerHandler.cls-meta.xml</PhysicalRelativePath>
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
-      <LastModifiedDateUtcTicks>131159876740000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160472430000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\TestResultTriggerHandler.cls</DependentUpon>
+    </None>
+    <None Include="classes\TestResultTriggerTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\TestResultTriggerTest.cls-meta.xml</PhysicalRelativePath>
+      <LastModifiedDateUtcTicks>131160427590000000</LastModifiedDateUtcTicks>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <DependentUpon>classes\TestResultTriggerTest.cls</DependentUpon>
     </None>
     <None Include="classes\TriggerHandler.cls-meta.xml">
       <PhysicalRelativePath>src\classes\TriggerHandler.cls-meta.xml</PhysicalRelativePath>
@@ -584,21 +633,14 @@
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\pages\KnowledgeCheckResults.page-meta.xml</PhysicalRelativePath>
       <Hash>gxummjxrHedPwiJoEqXaiA==</Hash>
-      <LastModifiedDateUtcTicks>131160030420000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160424890000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\pages\KnowledgeCheckResults.page</DependentUpon>
-    </None>
-    <None Include="pages\lessonLibrary.page-meta.xml">
-      <SubType>Metadata</SubType>
-      <PhysicalRelativePath>src\pages\lessonLibrary.page-meta.xml</PhysicalRelativePath>
-      <Hash>3ZnWeNhQ2+E9LC7IRnnT4w==</Hash>
-      <LastModifiedDateUtcTicks>131160006820000000</LastModifiedDateUtcTicks>
-      <DependentUpon>src\pages\lessonLibrary.page</DependentUpon>
     </None>
     <None Include="pages\Schedule.page-meta.xml">
       <PhysicalRelativePath>src\pages\Schedule.page-meta.xml</PhysicalRelativePath>
       <SubType>Metadata</SubType>
       <DependentUpon>pages\Schedule.page</DependentUpon>
-      <LastModifiedDateUtcTicks>131159818930000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160325520000000</LastModifiedDateUtcTicks>
       <Hash>4RDo/rIBGYInveQzrwK6mw==</Hash>
     </None>
     <None Include="triggers\TestResultTrigger.trigger-meta.xml">
